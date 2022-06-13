@@ -13,9 +13,10 @@ def game_play():
     while True:
         ai_choice = random.choice(list(options))
         try:
-            user_input = str(input("Make A Choice: "))
+            user_input = str(input("Make A Choice: ").upper())
         except ValueError as e:
             print ("Invalid Input - ", e)
+        
         if (user_input not in list(options)):
             print ("Invalid Input\nTry Again\n")
             
